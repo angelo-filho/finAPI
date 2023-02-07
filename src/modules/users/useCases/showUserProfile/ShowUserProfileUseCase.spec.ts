@@ -14,7 +14,7 @@ const test_user = {
 };
 
 describe("Show user profile", () => {
-  beforeAll(() => {
+  beforeEach(() => {
     usersRepository = new InMemoryUsersRepository();
     createUserUseCase = new CreateUserUseCase(usersRepository);
     showUserProfileUseCase = new ShowUserProfileUseCase(usersRepository);

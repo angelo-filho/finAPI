@@ -14,7 +14,7 @@ const test_user = {
 };
 
 describe("Authenticate User", () => {
-  beforeAll(() => {
+  beforeEach(() => {
     usersRepository = new InMemoryUsersRepository();
     createUserUseCase = new CreateUserUseCase(usersRepository);
     authenticateUserUseCase = new AuthenticateUserUseCase(usersRepository);
