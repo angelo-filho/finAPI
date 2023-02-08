@@ -39,8 +39,6 @@ describe("Create Statement Controller", () => {
       })
       .set({ Authorization: `Bearer ${token}` });
 
-    console.log(response.body);
-
     expect(response.status).toBe(201);
     expect(response.body).toHaveProperty("id");
     expect(response.body).toHaveProperty("type");
