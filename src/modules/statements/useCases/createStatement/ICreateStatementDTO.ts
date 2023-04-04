@@ -1,10 +1,10 @@
 import { Statement } from "../../entities/Statement";
 
-export type ICreateStatementDTO =
-Pick<
+type ICreateStatement = Pick<
   Statement,
-  'user_id' |
-  'description' |
-  'amount' |
-  'type'
->
+  "user_id" | "description" | "amount" | "type"
+>;
+
+export interface ICreateStatementDTO extends ICreateStatement {
+  sender_id?: string;
+}
